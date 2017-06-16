@@ -1,7 +1,7 @@
 <resources>
-    <string name="ThemeName">K-Klock Omni</string>
+    <string name="ThemeName">K-Klock</string>
     <string name="ThemeAuthor">KpChuck</string>
     <string-array name="ThemeChangelog">
-       <item>Made K-Klock compatible with Omni</item>
+       <item>Removed Android System and unnecessary options</item>
     </string-array>
 </resources>
