@@ -1,0 +1,7 @@
+<resources>
+    <string name="ThemeName">K-Klock Omni</string>
+    <string name="ThemeAuthor">KpChuck</string>
+    <string-array name="ThemeChangelog">
+       <item>Made K-Klock compatible with Omni</item>
+    </string-array>
+</resources>
