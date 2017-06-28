@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <color name="fake_preview">#ffffffff</color>
 
-    <string name="keyguard_widget_12_hours_format"><font size="10"> EEE dd </font>hh:mm a </string>
-    <string name="keyguard_widget_24_hours_format"><font size="10"> EEE dd </font>HH:mm </string>
+    <string name="keyguard_widget_12_hours_format"><font fgcolor="#ffffffff" size="10"> EEE dd </font><font fgcolor="#ffffffff">hh:mm a </font></string>
+    <string name="keyguard_widget_24_hours_format"><font fgcolor="#ffffffff" size="10"> EEE dd </font><font fgcolor="#ffffffff">HH:mm </font></string>
 
 
 </resources>
