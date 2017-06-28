@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <color name="fake_preview">#004885ed</color>
+
+    <string name="keyguard_widget_12_hours_format"><font fgcolor="#ffbc052d"></font></string>
+    <string name="keyguard_widget_24_hours_format"><font fgcolor="#ffbc052d"></font></string>
+
+
+</resources>

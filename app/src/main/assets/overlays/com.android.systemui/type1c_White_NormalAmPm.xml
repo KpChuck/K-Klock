@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="fake_preview">#ffffffff</color>
+
+    <string name="keyguard_widget_12_hours_format"> hh:mm a </string>
+    <string name="keyguard_widget_24_hours_format"> HH:mm </string>
+
+
+</resources>
