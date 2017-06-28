@@ -1,6 +1,6 @@
 <resources>
     <!-- Theme name and author name -->
-    <string name="ThemeName">K-Klock PA</string>
+    <string name="ThemeName">K-Klock Omni</string>
     <string name="ThemeAuthor">KpChuck</string>
     <!-- Your email for bug reports -->
     <string name="ThemeAuthorEmail">przestrzelski.com@gmail.com</string>
@@ -24,6 +24,6 @@
         <item>Fixed clock not turning grey on white background</item>
         <item>New app icon thanks to @ungeeked</item>
         <item>Added color previews for custom clock format and color</item>
-        <item>Changed package name so uninstall the previous version to remove duplicates</item>
+
     </string-array>
 </resources>

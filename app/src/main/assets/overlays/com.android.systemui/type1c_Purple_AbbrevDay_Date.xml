@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-
+    <color name="fake_preview">#ff6005bc</color>
     <string name="keyguard_widget_12_hours_format"><font fgcolor="#ff6005bc" size="10"> EEE dd </font><font fgcolor="#ff6005bc">hh:mm a </font></string>
     <string name="keyguard_widget_24_hours_format"><font fgcolor="#ff6005bc" size="10"> EEE dd </font><font fgcolor="#ff6005bc">HH:mm </font></string>
 

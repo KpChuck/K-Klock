@@ -2,8 +2,9 @@
 <resources>
 
 
-    <string name="keyguard_widget_12_hours_format"><font fgcolor="#ff4885ed"></font></string>
-    <string name="keyguard_widget_24_hours_format"><font fgcolor="#ff4885ed"></font></string>
+    <color name="fake_preview">#00ffffff</color>
+    <string name="keyguard_widget_12_hours_format"><font fgcolor="#ffffffff"> </font></string>
+    <string name="keyguard_widget_24_hours_format"><font fgcolor="#ffffffff"> </font></string>
 
 
 </resources>
