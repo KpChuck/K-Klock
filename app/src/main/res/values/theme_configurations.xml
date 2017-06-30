@@ -19,9 +19,10 @@
 
     <!-- Put your theme changelog here -->
     <string-array name="ThemeChangelog">
-        <item>Seperated clock color and clock format</item>
+        <item>Separated clock color and clock format</item>
         <item>Added new colors and formats, comment if you want any other ones</item>
-        <item>Added option to hide left clock on lockscreen</item>
+        <item>Added option to hide left and right clock on lockscreen</item>
+        <item>Added white-grey option for clock position. This means that the clock will be white and change to grey on white backgrounds. This won't work with any other colors.</item>
         <item>Removed stock clock</item>
         <item>For network speed turning the same color as the clock, open an app that changes statusbar icons to grey. After exiting the app the network speed monitor will revert to white</item>
 
