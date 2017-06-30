@@ -19,9 +19,11 @@
 
     <!-- Put your theme changelog here -->
     <string-array name="ThemeChangelog">
-        <item>Updated template to 10.1</item>
-        <item>Fixed clock not turning grey on white background</item>
-        <item>New app icon thanks to @ungeeked</item>
-        <item>Added color previews for custom clock format and color</item>
+        <item>Seperated clock color and clock format</item>
+        <item>Added new colors and formats, comment if you want any other ones</item>
+        <item>Added option to hide left clock on lockscreen</item>
+        <item>Removed stock clock</item>
+        <item>For network speed turning the same color as the clock, open an app that changes statusbar icons to grey. After exiting the app the network speed monitor will revert to white</item>
+
     </string-array>
 </resources>

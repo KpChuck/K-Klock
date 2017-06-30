@@ -22,8 +22,7 @@
         android:id="@*com.android.systemui:id/system_icons_super_container"
                   android:layout_width="wrap_content"
         android:visibility="gone"
-
-        android:layout_height="@*com.android.systemui:dimen/status_bar_header_height"
+                  android:layout_height="@*com.android.systemui:dimen/status_bar_header_height"
                   android:layout_alignWithParentIfMissing="true"
                   android:paddingEnd="@*com.android.systemui:dimen/system_icons_keyguard_padding_end"
                   android:layout_marginStart="@*com.android.systemui:dimen/system_icons_super_container_margin_start"

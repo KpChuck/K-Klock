@@ -6,24 +6,7 @@
   xmlns:android="http://schemas.android.com/apk/res/android"
   xmlns:systemui="http://schemas.android.com/apk/res/com.android.systemui">
 
-    <TextClock  android:format12Hour="@*com.android.systemui:string/keyguard_widget_12_hours_format"
-                android:format24Hour="@*com.android.systemui:string/keyguard_widget_24_hours_format"
-                android:textAppearance="@*com.android.systemui:style/TextAppearance.StatusBar.Clock"
-                android:textColor="@*com.android.systemui:color/status_bar_clock_color"
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent" android:gravity="center" android:singleLine="true" />
 
-    <com.android.systemui.statusbar.policy.Clock
-        android:textAppearance="@*com.android.systemui:style/TextAppearance.StatusBar.Clock"
-        android:gravity="center" android:id="@*com.android.systemui:id/clock"
-        android:textColor="@*com.android.systemui:color/status_bar_clock_color"
-        android:layout_width="0.0dip"
-        android:layout_height="fill_parent" android:singleLine="true"/>
-
-    <LinearLayout android:layout_height="fill_parent" android:layout_width="fill_parent"
-                  android:orientation="horizontal" android:gravity="center"
-                  android:id="@*com.android.systemui:id/system_icon_area">
-    </LinearLayout>
     <ImageView android:id="@*com.android.systemui:id/notification_lights_out" android:paddingBottom="2.0dip"
         android:visibility="gone" android:layout_width="@*com.android.systemui:dimen/status_bar_icon_size"
         android:layout_height="fill_parent" android:src="@*com.android.systemui:drawable/ic_sysbar_lights_out_dot_small"
@@ -32,6 +15,26 @@
         android:layout_width="fill_parent" android:layout_height="fill_parent" android:paddingStart="6.0dip"
         android:paddingEnd="6.0dip">
 
+    <LinearLayout android:layout_height="fill_parent" android:layout_width="wrap_content"
+                  android:orientation="horizontal" android:gravity="left"
+                  android:id="@*com.android.systemui:id/system_icon_area">
+
+        <TextClock  android:format12Hour="@*com.android.systemui:string/keyguard_widget_12_hours_format"
+            android:format24Hour="@*com.android.systemui:string/keyguard_widget_24_hours_format"
+            android:textAppearance="@*com.android.systemui:style/TextAppearance.StatusBar.Clock"
+            android:layout_width="wrap_content"
+            android:textColor="@*com.android.systemui:color/status_bar_clock_color"
+            android:layout_height="fill_parent" android:gravity="left" android:singleLine="true" />
+
+        <com.android.systemui.statusbar.policy.Clock
+            android:textAppearance="@*com.android.systemui:style/TextAppearance.StatusBar.Clock"
+            android:gravity="left|center" android:id="@*com.android.systemui:id/clock"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent" android:singleLine="true"
+        />
+
+
+        </LinearLayout>
 
         <TextView android:textSize="14.0dip" android:gravity="center_vertical" android:id="@*com.android.systemui:id/network_label"
             android:visibility="gone" android:layout_width="wrap_content" android:layout_height="fill_parent"
@@ -44,7 +47,6 @@
         <com.android.keyguard.AlphaOptimizedLinearLayout android:orientation="horizontal"
             android:id="@*com.android.systemui:id/system_icon_area" android:color="#ffffffff" android:layout_width="wrap_content"
             android:layout_height="fill_parent">
-
 
             <include layout="@*com.android.systemui:layout/system_icons" android:color="#ffffffff" />
 
