@@ -2,7 +2,7 @@
 <resources>
 
 
-    <string name="keyguard_widget_12_hours_format"><small> EEE dd </small>hh:mm a </string>
+    <string name="keyguard_widget_12_hours_format"><small> EEE dd </small>h:mm a </string>
     <string name="keyguard_widget_24_hours_format"><small> EEE dd </small>HH:mm </string>
 
 
