@@ -2,11 +2,11 @@
 <resources>
 
 
-
     <style name="TextAppearance.StatusBar.Clock" parent="@*android:style/TextAppearance.StatusBar.Icon">
         <item name="android:textSize">@*com.android.systemui:dimen/status_bar_clock_size</item>
-        <item name="android:textColor">@*com.android.systemui:color/status_bar_clock_color</item>
+        <item name="android:textColor">#ffffffff</item>
         <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textStyle">italic</item>
     </style>
 
     <style name="TextAppearance.StatusBar.Expanded.Clock" parent="@*com.android.systemui:style/TextAppearance.StatusBar.Expanded">

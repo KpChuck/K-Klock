@@ -2,9 +2,7 @@
 <resources>
 
 
-
-
-    <string name="keyguard_widget_12_hours_format"> hh:mm a </string>
+    <string name="keyguard_widget_12_hours_format"> h:mm </string>
     <string name="keyguard_widget_24_hours_format"> HH:mm </string>
 
 
