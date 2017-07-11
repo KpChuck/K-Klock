@@ -19,11 +19,6 @@
 
     <!-- Put your theme changelog here -->
     <string-array name="ThemeChangelog">
-        <item>Added 'Center Clock not visible on lockscreen' option </item>
-        <item>Updated template to 10.1</item>
-        <item>Fixed clock not turning grey on white background</item>
-        <item>New app icon thanks to @ungeeked</item>
-        <item>Added color previews for custom clock format and color</item>
-        <item>Changed package name so uninstall the previous version to remove duplicates</item>
+        <item>Added more clock formats and colors</item>
     </string-array>
 </resources>
