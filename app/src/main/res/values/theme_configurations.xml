@@ -20,5 +20,6 @@
     <!-- Put your theme changelog here -->
     <string-array name="ThemeChangelog">
       <item>Made LineageOS compatible version</item>
+        <item>v5.2</item>
     </string-array>
 </resources>

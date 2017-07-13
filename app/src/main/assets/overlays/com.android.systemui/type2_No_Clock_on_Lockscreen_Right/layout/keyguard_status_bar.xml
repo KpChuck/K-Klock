@@ -7,14 +7,11 @@
 				  android:layout_width="wrap_content"
 				  android:layout_height="@*com.android.systemui:dimen/status_bar_header_height"
 				  android:layout_alignWithParentIfMissing="true"
-				  android:paddingEnd="@*com.android.systemui:dimen/system_icons_keyguard_padding_end"
-				  android:layout_marginStart="@*com.android.systemui:dimen/system_icons_super_container_margin_start"
-				  android:layout_toStartOf="@*com.android.systemui:id/multi_user_switch">
+				  android:paddingEnd="@*com.android.systemui:dimen/system_icons_keyguard_padding_end" android:layout_marginStart="@*com.android.systemui:dimen/system_icons_super_container_margin_start" android:layout_toStartOf="@*com.android.systemui:id/multi_user_switch">
 		<FrameLayout android:layout_gravity="center_vertical" android:id="@*com.android.systemui:id/system_icons_container" android:layout_width="wrap_content" android:layout_height="@*com.android.systemui:dimen/status_bar_height">
 			<include layout="@*com.android.systemui:layout/system_icons" />
 		</FrameLayout>
-
-		<TextView android:textAppearance="@*com.android.systemui:style/TextAppearance.StatusBar.Clock" android:textSize="@*com.android.systemui:dimen/status_bar_clock_size" android:layout_gravity="center_vertical" android:id="@*com.android.systemui:id/battery_level" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:importantForAccessibility="noHideDescendants" android:paddingEnd="@*com.android.systemui:dimen/battery_level_padding_end" android:layout_marginStart="@*com.android.systemui:dimen/header_battery_margin_keyguard" />
+		<TextView android:textSize="@*com.android.systemui:dimen/battery_level_text_size" android:textColor="@*com.android.systemui:color/status_bar_battery_level_text_color" android:layout_gravity="center_vertical" android:id="@*com.android.systemui:id/battery_level" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:importantForAccessibility="noHideDescendants" android:paddingEnd="@*com.android.systemui:dimen/battery_level_padding_end" android:layout_marginStart="@*com.android.systemui:dimen/header_battery_margin_keyguard" />
 	</LinearLayout>
 	<com.android.keyguard.CarrierText android:textAppearance="?android:textAppearanceSmall" android:textColor="#ffffffff" android:ellipsize="marquee" android:gravity="center_vertical" android:id="@*com.android.systemui:id/keyguard_carrier_text" android:layout_width="fill_parent" android:layout_height="fill_parent" android:singleLine="true" android:layout_marginStart="@*com.android.systemui:dimen/keyguard_carrier_text_margin" android:layout_toStartOf="@*com.android.systemui:id/system_icons_super_container" />
 </com.android.systemui.statusbar.phone.KeyguardStatusBarView>
