@@ -17,14 +17,14 @@
                    android:layout_height="@*com.android.systemui:dimen/multi_user_avatar_keyguard_size"
                    android:scaleType="centerInside" />
     </com.android.systemui.statusbar.phone.MultiUserSwitch>
-    <!-- Edited Values
-        android:layout_width="0.0dip"
-        android:visibility="gone"
+    <!--
+    Revert Edited Values
+        android:layout_width="0.0dip" -> android:layout_width="wrap_content"
+        android:visibility="gone" -> delete android:visibility
                    -->
     <LinearLayout
 
-        android:layout_width="0.0dip"
-        android:visibility="gone"
+        android:layout_width="wrap_content"
 
         android:id="@*com.android.systemui:id/system_icons_super_container"
         android:layout_height="@*com.android.systemui:dimen/status_bar_header_height"
