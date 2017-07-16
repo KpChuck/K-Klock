@@ -20,5 +20,6 @@
     <!-- Put your theme changelog here -->
     <string-array name="ThemeChangelog">
         <item>Added more clock formats and colors</item>
+        <item>Fixed left clock alignment</item>
     </string-array>
 </resources>
