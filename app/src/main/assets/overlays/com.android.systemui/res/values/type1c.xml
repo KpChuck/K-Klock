@@ -2,8 +2,17 @@
 <resources>
 
 
-    <string name="keyguard_widget_12_hours_format"><font fgcolor="#ffbc052d"></font></string>
-    <string name="keyguard_widget_24_hours_format"><font fgcolor="#ffbc052d"></font></string>
 
+    <style name="TextAppearance.StatusBar.Clock" parent="@*android:style/TextAppearance.StatusBar.Icon">
+        <item name="android:textSize">@*com.android.systemui:dimen/status_bar_clock_size</item>
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
+    <style name="TextAppearance.StatusBar.Expanded.Clock" parent="@*com.android.systemui:style/TextAppearance.StatusBar.Expanded">
+        <item name="android:textSize">@*com.android.systemui:dimen/qs_time_expanded_size</item>
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
 
 </resources>

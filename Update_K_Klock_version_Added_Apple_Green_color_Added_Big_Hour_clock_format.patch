@@ -1,0 +1,50 @@
+Index: app/build.gradle
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/build.gradle	(revision 49346fbca9c9f5b7c5cf0196c1afbb3d86c629a8)
++++ app/build.gradle	(revision )
+@@ -33,7 +33,7 @@
+         minSdkVersion 24
+         targetSdkVersion 26
+         versionCode 1
+-        versionName "5.5"
++        versionName "5.6"
+         buildConfigField "String", "IV_KEY", "\"" + IV_KEY + "\""
+         buildConfigField "byte[]", "DECRYPTION_KEY", String.valueOf("\"" + KEY + "\"").replace("\"", "").replace("[", "{").replace("]", "}")
+         buildConfigField "byte[]", "IV_KEY", String.valueOf("\"" + IV_KEY + "\"").replace("\"", "").replace("[", "{").replace("]", "}")
+Index: app/src/main/assets/overlays/com.android.systemui/type1b_Big_Hour_with_AmPm.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/assets/overlays/com.android.systemui/type1b_Big_Hour_with_AmPm.xml	(revision )
++++ app/src/main/assets/overlays/com.android.systemui/type1b_Big_Hour_with_AmPm.xml	(revision )
+@@ -0,0 +1,9 @@
++<?xml version="1.0" encoding="utf-8"?>
++<resources>
++
++
++    <string name="keyguard_widget_12_hours_format"><big> h</big>:mm a </string>
++    <string name="keyguard_widget_24_hours_format"><big> HH</big>:mm </string>
++
++
++</resources>
+\ No newline at end of file
+Index: app/src/main/assets/overlays/com.android.systemui/type1a_Apple_Green.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/assets/overlays/com.android.systemui/type1a_Apple_Green.xml	(revision )
++++ app/src/main/assets/overlays/com.android.systemui/type1a_Apple_Green.xml	(revision )
+@@ -0,0 +1,7 @@
++<?xml version="1.0" encoding="utf-8"?>
++<resources>
++
++    <color name="status_bar_clock_color">#ff27e4a0</color>
++
++
++</resources>
+\ No newline at end of file

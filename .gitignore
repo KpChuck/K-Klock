@@ -75,3 +75,9 @@ proguard/
 .idea/
 #gradle.properties
 *.iml
+
+#############################################################################
+# Encrypted Assets
+#############################################################################
+app/src/main/assets-encrypted
+app/release/output\.json

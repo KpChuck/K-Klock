@@ -17,15 +17,23 @@
                    android:layout_height="@*com.android.systemui:dimen/multi_user_avatar_keyguard_size"
                    android:scaleType="centerInside" />
     </com.android.systemui.statusbar.phone.MultiUserSwitch>
+    <!-- Edited Values
+        android:layout_width="0.0dip"
+        android:visibility="gone"
+                   -->
     <LinearLayout
 
+        android:layout_width="0.0dip"
+        android:visibility="gone"
+
         android:id="@*com.android.systemui:id/system_icons_super_container"
-                  android:layout_width="wrap_content"
-                  android:layout_height="@*com.android.systemui:dimen/status_bar_header_height"
-                  android:layout_alignWithParentIfMissing="true"
-                  android:paddingEnd="@*com.android.systemui:dimen/system_icons_keyguard_padding_end"
-                  android:layout_marginStart="@*com.android.systemui:dimen/system_icons_super_container_margin_start"
-                  android:layout_toStartOf="@*com.android.systemui:id/multi_user_switch">
+        android:layout_height="@*com.android.systemui:dimen/status_bar_header_height"
+        android:layout_alignWithParentIfMissing="true"
+        android:paddingEnd="@*com.android.systemui:dimen/system_icons_keyguard_padding_end"
+        android:layout_marginStart="@*com.android.systemui:dimen/system_icons_super_container_margin_start"
+        android:layout_toStartOf="@*com.android.systemui:id/multi_user_switch">
+
+
         <FrameLayout android:layout_gravity="center_vertical" android:id="@*com.android.systemui:id/system_icons_container"
                      android:layout_width="wrap_content" android:layout_height="@*com.android.systemui:dimen/status_bar_height">
             <include layout="@*com.android.systemui:layout/system_icons" />
