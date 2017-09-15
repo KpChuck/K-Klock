@@ -20,20 +20,6 @@
         tools:node="replace"
         tools:ignore="GoogleAppIndexingWarning">
 
-        <activity android:name=".SubstratumLauncher">
-            <intent-filter>
-                <action android:name="projekt.substratum.THEME"/>
-                <category android:name="android.intent.category.DEFAULT"/>
-            </intent-filter>
-            <intent-filter>
-                <action android:name="projekt.substratum.GET_KEYS" />
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-            </intent-filter>
-        </activity>
-
         <meta-data
             android:name="Substratum_Legacy"
             android:value="@bool/ThemeSupportLegacy"/>
