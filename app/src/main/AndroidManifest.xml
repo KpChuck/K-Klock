@@ -35,7 +35,6 @@
             </intent-filter>
         </activity>
 
->>>>>>> a748881... EncryptedAssets: Solved the issue with the handshake
         <meta-data
             android:name="Substratum_Legacy"
             android:value="@bool/ThemeSupportLegacy"/>
