@@ -20,7 +20,7 @@
         tools:node="replace"
         tools:ignore="GoogleAppIndexingWarning">
 
-        <activity android:name="substratum.theme.template.SubstratumLauncher">
+        <activity android:name=".SubstratumLauncher">
             <intent-filter>
                 <action android:name="projekt.substratum.THEME"/>
                 <category android:name="android.intent.category.DEFAULT"/>
@@ -52,17 +52,12 @@
         <meta-data
             android:name="Substratum_ThemeReady"
             android:value="@string/ThemeReadyRequirement"/>
-        <meta-data
-            android:name="Substratum_Wallpapers"
-            android:value="@string/ThemeWallpaperSource"/>
-        <meta-data
-            android:name="Substratum_HeroOverride"
-            android:value="@string/ThemeHeroOverride"/>
+
 
         <!-- SUBSTRATUM INTERNAL USE: DO NOT TOUCH -->
         <meta-data
             android:name="Substratum_Plugin"
-            android:value="10.0.4"/>
+            android:value="10.0.1"/>
         <meta-data
             android:name="Substratum_Encryption"
             android:value="@string/encryption_status"/>
