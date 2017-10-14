@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-
-<attr name="viewLocation" format="integer" />
-
+    <attr name="viewLocation" format="integer" />
 
 </resources>

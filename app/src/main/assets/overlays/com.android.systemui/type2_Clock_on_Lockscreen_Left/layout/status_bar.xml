@@ -29,5 +29,4 @@
         </com.android.keyguard.AlphaOptimizedLinearLayout>
     </LinearLayout>
     <ViewStub android:id="@*com.android.systemui:id/emergency_cryptkeeper_text" android:layout="@*com.android.systemui:layout/emergency_cryptkeeper_text" android:layout_width="wrap_content" android:layout_height="fill_parent" />
-    <com.android.systemui.statusbar.policy.BatteryBarController android:layout_width="fill_parent" android:layout_height="1.0dip" systemui:viewLocation="1" />
 </com.android.systemui.statusbar.phone.PhoneStatusBarView>
