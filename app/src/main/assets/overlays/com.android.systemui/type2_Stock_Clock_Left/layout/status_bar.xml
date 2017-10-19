@@ -11,22 +11,20 @@
             android:orientation="horizontal" android:gravity="left"
             android:id="@*com.android.systemui:id/system_icon_area">
 
-
-            <TextClock  android:id="@*com.android.systemui:id/clock"
-                android:format12Hour="@*com.android.systemui:string/keyguard_widget_12_hours_format"
-                android:format24Hour="@*com.android.systemui:string/keyguard_widget_24_hours_format"
+            <com.android.systemui.statusbar.policy.Clock
                 android:textAppearance="@*com.android.systemui:style/TextAppearance.StatusBar.Clock"
-                android:layout_width="wrap_content"
+                android:gravity="left|center" android:id="@*com.android.systemui:id/clock"
                 android:textColor="@*com.android.systemui:color/status_bar_clock_color"
-                android:layout_height="fill_parent" android:gravity="left|center" android:singleLine="true" />
+                android:layout_width="wrap_content" android:layout_height="fill_parent" android:singleLine="true"
+                android:paddingStart="@*com.android.systemui:dimen/status_bar_clock_end_padding"
+                android:paddingEnd="@*com.android.systemui:dimen/status_bar_clock_end_padding" />
+
         </LinearLayout>
         <!--Finish copying here-->
         <com.android.systemui.statusbar.AlphaOptimizedFrameLayout android:orientation="horizontal" android:id="@*com.android.systemui:id/notification_icon_area" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
+        <include android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" layout="@*com.android.systemui:layout/highlight_hint_notification_view" />
         <com.android.keyguard.AlphaOptimizedLinearLayout android:orientation="horizontal" android:id="@*com.android.systemui:id/system_icon_area" android:layout_width="wrap_content" android:layout_height="fill_parent">
-            <com.android.systemui.statusbar.policy.NetworkTraffic android:gravity="center|right" android:id="@*com.android.systemui:id/networkTraffic" android:layout_width="wrap_content" android:layout_height="fill_parent" android:singleLine="false" android:fontFamily="sans-serif-condensed" android:layout_marginStart="2.0dip" android:layout_marginEnd="2.0dip" />
             <include layout="@*com.android.systemui:layout/system_icons" />
-            <com.android.systemui.statusbar.policy.Clock android:textAppearance="@*com.android.systemui:style/TextAppearance.StatusBar.Clock"
-                android:gravity="start|center" android:id="@*com.android.systemui:id/clock" android:layout_width="0dip" android:layout_height="fill_parent" android:singleLine="true" android:paddingStart="@*com.android.systemui:dimen/status_bar_clock_starting_padding" android:paddingEnd="@*com.android.systemui:dimen/status_bar_clock_end_padding" />
         </com.android.keyguard.AlphaOptimizedLinearLayout>
     </LinearLayout>
     <ViewStub android:id="@*com.android.systemui:id/emergency_cryptkeeper_text" android:layout="@*com.android.systemui:layout/emergency_cryptkeeper_text" android:layout_width="wrap_content" android:layout_height="fill_parent" />

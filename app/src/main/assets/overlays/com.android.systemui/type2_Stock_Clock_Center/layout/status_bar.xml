@@ -13,13 +13,14 @@
         android:orientation="horizontal" android:gravity="center"
         android:id="@*com.android.systemui:id/system_icon_area">
 
-        <TextClock  android:format12Hour="@*com.android.systemui:string/keyguard_widget_12_hours_format"
-                android:format24Hour="@*com.android.systemui:string/keyguard_widget_24_hours_format"
-                android:textAppearance="@*com.android.systemui:style/TextAppearance.StatusBar.Clock"
-                android:layout_width="wrap_content"
-                android:textColor="@*com.android.systemui:color/status_bar_clock_color"
-                android:layout_height="fill_parent" android:gravity="center" android:singleLine="true" />
+        <com.android.systemui.statusbar.policy.Clock
+            android:textAppearance="@*com.android.systemui:style/TextAppearance.StatusBar.Clock"
+            android:gravity="center" android:id="@*com.android.systemui:id/clock"
+            android:textColor="@*com.android.systemui:color/status_bar_clock_color"
+            android:layout_width="wrap_content" android:layout_height="fill_parent" android:singleLine="true" />
+
     </LinearLayout>
+
 
         <com.android.keyguard.AlphaOptimizedLinearLayout android:orientation="horizontal"
             android:id="@*com.android.systemui:id/system_icon_area" android:layout_width="0.0dip"  android:layout_weight="1"
