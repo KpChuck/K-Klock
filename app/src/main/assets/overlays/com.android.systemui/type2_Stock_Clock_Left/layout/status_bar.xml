@@ -4,29 +4,29 @@
   xmlns:systemui="http://schemas.android.com/apk/res/com.android.systemui">
     <ImageView android:id="@*com.android.systemui:id/notification_lights_out" android:paddingBottom="2.0dip" android:visibility="gone" android:layout_width="@*com.android.systemui:dimen/status_bar_icon_size" android:layout_height="fill_parent" android:src="@*com.android.systemui:drawable/ic_sysbar_lights_out_dot_small" android:scaleType="center" android:paddingStart="6.0dip" />
     <LinearLayout android:orientation="horizontal" android:id="@*com.android.systemui:id/status_bar_contents" android:layout_width="fill_parent" android:layout_height="fill_parent" android:paddingStart="6.0dip" android:paddingEnd="8.0dip">
-        <!-- White-Grey Left clock not on lockscreen.
-			The only difference between this and No Clock on Lockscreen Left is the line android:id="@*com.android.systemui:id/clock". This makes sure that the clock stays white and turns grey against white backgrounds
-		-->
+
+        <!-- Stock Left clock not on lockscreen.		-->
         <LinearLayout android:layout_height="fill_parent" android:layout_width="wrap_content"
             android:orientation="horizontal" android:gravity="left"
             android:id="@*com.android.systemui:id/system_icon_area">
 
 
-            <TextClock  android:id="@*com.android.systemui:id/clock"
-                android:format12Hour="@*com.android.systemui:string/keyguard_widget_12_hours_format"
-                android:format24Hour="@*com.android.systemui:string/keyguard_widget_24_hours_format"
+            <com.android.systemui.statusbar.policy.Clock
                 android:textAppearance="@*com.android.systemui:style/TextAppearance.StatusBar.Clock"
-                android:layout_width="wrap_content"
+                android:gravity="left|center" android:id="@*com.android.systemui:id/clock"
                 android:textColor="@*com.android.systemui:color/status_bar_clock_color"
-                android:layout_height="fill_parent" android:gravity="left|center" android:singleLine="true" />
+                android:layout_width="wrap_content" android:layout_height="fill_parent" android:singleLine="true"
+                android:paddingStart="@*com.android.systemui:dimen/status_bar_clock_end_padding"
+                android:paddingEnd="@*com.android.systemui:dimen/status_bar_clock_end_padding" />
+
         </LinearLayout>
         <!--Finish copying here-->
+
+
         <com.android.systemui.statusbar.AlphaOptimizedFrameLayout android:orientation="horizontal" android:id="@*com.android.systemui:id/notification_icon_area" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
         <com.android.keyguard.AlphaOptimizedLinearLayout android:orientation="horizontal" android:id="@*com.android.systemui:id/system_icon_area" android:layout_width="wrap_content" android:layout_height="fill_parent">
             <com.android.systemui.statusbar.policy.NetworkTraffic android:gravity="center|right" android:id="@*com.android.systemui:id/networkTraffic" android:layout_width="wrap_content" android:layout_height="fill_parent" android:singleLine="false" android:fontFamily="sans-serif-condensed" android:layout_marginStart="2.0dip" android:layout_marginEnd="2.0dip" />
             <include layout="@*com.android.systemui:layout/system_icons" />
-            <com.android.systemui.statusbar.policy.Clock android:textAppearance="@*com.android.systemui:style/TextAppearance.StatusBar.Clock"
-                android:gravity="start|center" android:id="@*com.android.systemui:id/clock" android:layout_width="0dip" android:layout_height="fill_parent" android:singleLine="true" android:paddingStart="@*com.android.systemui:dimen/status_bar_clock_starting_padding" android:paddingEnd="@*com.android.systemui:dimen/status_bar_clock_end_padding" />
         </com.android.keyguard.AlphaOptimizedLinearLayout>
     </LinearLayout>
     <ViewStub android:id="@*com.android.systemui:id/emergency_cryptkeeper_text" android:layout="@*com.android.systemui:layout/emergency_cryptkeeper_text" android:layout_width="wrap_content" android:layout_height="fill_parent" />
