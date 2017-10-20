@@ -14,7 +14,6 @@
             <com.android.systemui.statusbar.policy.Clock
                 android:textAppearance="@*com.android.systemui:style/TextAppearance.StatusBar.Clock"
                 android:gravity="left|center" android:id="@*com.android.systemui:id/clock"
-                android:textColor="@*com.android.systemui:color/status_bar_clock_color"
                 android:layout_width="wrap_content" android:layout_height="fill_parent" android:singleLine="true"
                 android:paddingStart="@*com.android.systemui:dimen/status_bar_clock_end_padding"
                 android:paddingEnd="@*com.android.systemui:dimen/status_bar_clock_end_padding" />
