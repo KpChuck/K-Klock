@@ -9,30 +9,21 @@
 		<com.android.keyguard.AlphaOptimizedLinearLayout android:orientation="horizontal" android:id="@*com.android.systemui:id/system_icon_area" android:layout_width="wrap_content" android:layout_height="fill_parent">
 			<include layout="@*com.android.systemui:layout/system_icons" />
 
-			<!-- White-Grey Right clock not on lockscreen.
-			The only difference between this and No Clock on Lockscreen Right is the line android:id="@*com.android.systemui:id/clock". This makes sure that the clock stays white and turns grey against white backgrounds
-			 Make sure to include the keyguard_status_bar.xml to make sure the statusbar icons appear on the lockscreen-->
+			<!-- Stock not on lockscreen.
+        Make sure to include the keyguard_status_bar.xml to make sure the statusbar icons appear on the lockscreen-->
 			<LinearLayout android:layout_height="fill_parent" android:layout_width="fill_parent"
-						  android:orientation="horizontal" android:gravity="center"
-						  android:id="@*com.android.systemui:id/system_icon_area">
+				android:orientation="horizontal" android:gravity="center"
+				android:id="@*com.android.systemui:id/system_icon_area">
 
-				<TextClock  android:id="@*com.android.systemui:id/clock"
-							android:format12Hour="@*com.android.systemui:string/keyguard_widget_12_hours_format"
-							android:format24Hour="@*com.android.systemui:string/keyguard_widget_24_hours_format"
-							android:textAppearance="@*com.android.systemui:style/TextAppearance.StatusBar.Clock"
-							android:textColor="@*com.android.systemui:color/status_bar_clock_color"
-							android:layout_width="wrap_content"  android:layout_alignParentBottom="true"
-							android:layout_height="fill_parent" android:gravity="start|center" android:singleLine="true" />
+				<com.android.systemui.statusbar.policy.Clock
+					android:textAppearance="@*com.android.systemui:style/TextAppearance.StatusBar.Clock"
+					android:gravity="start|center" android:id="@*com.android.systemui:id/clock"
+					android:textColor="@*com.android.systemui:color/status_bar_clock_color"
+					android:layout_width="wrap_content" android:layout_height="fill_parent" android:singleLine="true"
+					android:paddingEnd="@*com.android.systemui:dimen/status_bar_clock_end_padding" />
+
 			</LinearLayout>
 			<!-- Finish copying here-->
-
-
-			<!-- This is the stock clock, you can set android:layout_width="0dip" to hide it -->
-			<com.android.systemui.statusbar.policy.Clock
-				android:textAppearance="@*com.android.systemui:style/TextAppearance.StatusBar.Clock"
-				android:gravity="start|center" android:id="@*com.android.systemui:id/clock"
-				android:layout_width="0dip" android:layout_height="fill_parent"
-				android:singleLine="true" android:paddingEnd="@*com.android.systemui:dimen/status_bar_clock_end_padding" />
 
 		</com.android.keyguard.AlphaOptimizedLinearLayout>
 	</LinearLayout>
