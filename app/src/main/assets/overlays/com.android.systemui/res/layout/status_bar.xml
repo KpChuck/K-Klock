@@ -4,6 +4,13 @@
   xmlns:systemui="http://schemas.android.com/apk/res/com.android.systemui">
 
 
+    <!-- Make sure to include this linear layout to keep the statusbar icons aligned with the clock-->
+    <LinearLayout android:layout_height="fill_parent" android:layout_width="fill_parent"
+        android:orientation="horizontal" android:gravity="center"
+        android:id="@*com.android.systemui:id/system_icon_area">
+    </LinearLayout>
+    <!-- Finish selecting here -->
+
     <ImageView android:id="@*com.android.systemui:id/notification_lights_out" android:paddingBottom="2.0dip" android:visibility="gone" android:layout_width="@*com.android.systemui:dimen/status_bar_icon_size" android:layout_height="fill_parent" android:src="@*com.android.systemui:drawable/ic_sysbar_lights_out_dot_small" android:scaleType="center" android:paddingStart="6.0dip" />
     <LinearLayout android:orientation="horizontal" android:id="@*com.android.systemui:id/status_bar_contents" android:layout_width="fill_parent" android:layout_height="fill_parent" android:paddingStart="6.0dip" android:paddingEnd="8.0dip">
         <com.android.systemui.statusbar.AlphaOptimizedFrameLayout android:orientation="horizontal" android:id="@*com.android.systemui:id/notification_icon_area" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
