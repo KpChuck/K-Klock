@@ -41,6 +41,8 @@ android {
 
         buildConfigField "boolean", "SUPPORTS_THIRD_PARTY_THEME_SYSTEMS", "" + SUPPORTS_THIRD_PARTY_SYSTEMS
         resValue "bool", "SUPPORTS_THIRD_PARTY_THEME_SYSTEMS", "" + SUPPORTS_THIRD_PARTY_SYSTEMS
+        setProperty("archivesBaseName", "K-Klock-beta")
+
     }
     buildTypes {
         debug {
