@@ -1,16 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.android.systemui.statusbar.phone.PhoneStatusBarView android:orientation="vertical" android:id="@*com.android.systemui:id/status_bar" android:background="@*com.android.systemui:drawable/system_bar_background" android:focusable="false" android:descendantFocusability="afterDescendants" android:layout_width="fill_parent" android:layout_height="@*com.android.systemui:dimen/status_bar_height"
-  xmlns:android="http://schemas.android.com/apk/res/android"
-  xmlns:systemui="http://schemas.android.com/apk/res/com.android.systemui">
+<com.android.systemui.statusbar.phone.PhoneStatusBarView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:systemui="http://schemas.android.com/apk/res/com.android.systemui"
+    android:layout_width="match_parent"
+    android:layout_height="@*com.android.systemui:dimen/status_bar_height"
+    android:id="@*com.android.systemui:id/status_bar"
+    android:background="@*com.android.systemui:drawable/system_bar_background"
+    android:orientation="vertical"
+    android:focusable="false"
+    android:descendantFocusability="afterDescendants"
+    >
 
+
+    <!-- Make sure to include this linear layout to keep the statusbar icons aligned with the clock-->
     <LinearLayout android:layout_height="fill_parent" android:layout_width="fill_parent"
         android:orientation="horizontal" android:gravity="center"
         android:id="@*com.android.systemui:id/system_icon_area">
     </LinearLayout>
-    <!-- Finish copying here -->
-    <ImageView android:id="@*com.android.systemui:id/notification_lights_out" android:paddingBottom="2.0dip" android:visibility="gone" android:layout_width="@*com.android.systemui:dimen/status_bar_icon_size" android:layout_height="fill_parent" android:src="@*com.android.systemui:drawable/ic_sysbar_lights_out_dot_small" android:scaleType="center" android:paddingStart="6.0dip" />
-    <LinearLayout android:orientation="horizontal" android:id="@*com.android.systemui:id/status_bar_contents" android:layout_width="fill_parent" android:layout_height="fill_parent" android:paddingStart="6.0dip" android:paddingEnd="8.0dip">
-        <com.android.systemui.statusbar.AlphaOptimizedFrameLayout android:orientation="horizontal" android:id="@*com.android.systemui:id/notification_icon_area" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
+    <!-- Finish selecting here -->
+
+    <ImageView
+        android:id="@*com.android.systemui:id/notification_lights_out"
+        android:layout_width="@*com.android.systemui:dimen/status_bar_icon_size"
+        android:layout_height="match_parent"
+        android:paddingStart="6dip"
+        android:paddingBottom="2dip"
+        android:src="@*com.android.systemui:drawable/ic_sysbar_lights_out_dot_small"
+        android:scaleType="center"
+        android:visibility="gone"
+        />
+
+    <LinearLayout android:id="@*com.android.systemui:id/status_bar_contents"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingStart="4dp"
+        android:paddingEnd="8dp"
+        android:orientation="horizontal"
+        >
+
+        <ImageView
+            android:id="@*com.android.systemui:id/status_bar_logo"
+            android:layout_width="@*com.android.systemui:dimen/status_bar_icon_size"
+            android:layout_height="@*com.android.systemui:dimen/status_bar_icon_size"
+            android:src="@*com.android.systemui:drawable/status_bar_logo"
+            android:scaleType="centerInside"
+            android:padding="2dp"
+            android:visibility="gone" />
+
+        <ViewStub
+            android:id="@*com.android.systemui:id/operator_name"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout="@*com.android.systemui:layout/operator_name" />
+
+        <!-- The alpha of this area is controlled from both PhoneStatusBarTransitions and
+             PhoneStatusBar (DISABLE_NOTIFICATION_ICONS). -->
+        <com.android.systemui.statusbar.AlphaOptimizedFrameLayout
+            android:id="@*com.android.systemui:id/notification_icon_area"
+            android:paddingStart="2dp"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal" />
 
         <!-- Center clock on Lockscreen. Copy and paste it above system_icon_area-->
         <TextClock  android:format12Hour="@*com.android.systemui:string/keyguard_widget_12_hours_format"
@@ -24,16 +75,49 @@
             android:id="@*com.android.systemui:id/system_icon_area" android:layout_width="0.0dip"  android:layout_weight="1"
             android:layout_height="fill_parent">
 
-        <View android:visibility="invisible" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
+            <View android:visibility="invisible" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
 
-        <!-- Stop copying here -->
+            <!-- Stop copying here -->
 
-            <com.android.systemui.statusbar.policy.NetworkTraffic android:gravity="center|right" android:id="@*com.android.systemui:id/networkTraffic" android:layout_width="wrap_content" android:layout_height="fill_parent" android:singleLine="false" android:fontFamily="sans-serif-condensed" android:layout_marginStart="2.0dip" android:layout_marginEnd="2.0dip" />
+            <com.android.systemui.statusbar.policy.NetworkTraffic
+                android:id="@*com.android.systemui:id/networkTraffic"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="2dp"
+                android:layout_marginEnd="2dp"
+                android:singleLine="false"
+                android:fontFamily="sans-serif-condensed"
+                android:gravity="right|center_vertical"/>
+
             <include layout="@*com.android.systemui:layout/system_icons" />
-            <com.android.systemui.statusbar.policy.Clock android:textAppearance="@*com.android.systemui:style/TextAppearance.StatusBar.Clock"
-                android:gravity="start|center" android:id="@*com.android.systemui:id/clock" android:layout_width="0.0dip" android:layout_height="fill_parent" android:singleLine="true" android:paddingStart="@*com.android.systemui:dimen/status_bar_clock_starting_padding" android:paddingEnd="@*com.android.systemui:dimen/status_bar_clock_end_padding" />
+
+            <com.android.systemui.statusbar.policy.Clock
+                android:id="@*com.android.systemui:id/clock"
+                android:textAppearance="@*com.android.systemui:style/TextAppearance.StatusBar.Clock"
+                android:layout_width="0.0dip"
+                android:layout_height="match_parent"
+                android:singleLine="true"
+                android:paddingStart="@*com.android.systemui:dimen/status_bar_clock_starting_padding"
+                android:paddingEnd="@*com.android.systemui:dimen/status_bar_clock_end_padding"
+                android:gravity="center_vertical|start"
+                />
         </com.android.keyguard.AlphaOptimizedLinearLayout>
     </LinearLayout>
-    <ViewStub android:id="@*com.android.systemui:id/emergency_cryptkeeper_text" android:layout="@*com.android.systemui:layout/emergency_cryptkeeper_text" android:layout_width="wrap_content" android:layout_height="fill_parent" />
-    <com.android.systemui.statusbar.policy.BatteryBarController android:layout_width="fill_parent" android:layout_height="1.0dip" systemui:viewLocation="1" />
+
+    <ViewStub
+        android:id="@*com.android.systemui:id/emergency_cryptkeeper_text"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout="@*com.android.systemui:layout/emergency_cryptkeeper_text"
+        />
+
+    <ViewStub
+        android:id="@*com.android.systemui:id/ticker_stub"
+        android:inflatedId="@*com.android.systemui:id/ticker"
+        android:layout="@*com.android.systemui:layout/status_bar_ticker"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+
 </com.android.systemui.statusbar.phone.PhoneStatusBarView>
