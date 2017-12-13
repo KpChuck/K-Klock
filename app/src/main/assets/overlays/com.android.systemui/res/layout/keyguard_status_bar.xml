@@ -11,6 +11,6 @@
         </FrameLayout>
     </LinearLayout>
     <com.android.keyguard.CarrierText 
-        android:textAppearance="?*android:textAppearanceSmall"
-        android:textColor="com.android.systemui:wallpaperTextColorSecondary" android:ellipsize="marquee" android:gravity="center_vertical" android:id="@*com.android.systemui:id/keyguard_carrier_text" android:layout_width="fill_parent" android:layout_height="fill_parent" android:singleLine="true" android:layout_marginStart="@*com.android.systemui:dimen/keyguard_carrier_text_margin" android:layout_toStartOf="@*com.android.systemui:id/system_icons_super_container" />
+        android:textAppearance="?android:textAppearanceSmall"
+        android:textColor="?wallpaperTextColorSecondary" android:ellipsize="marquee" android:gravity="center_vertical" android:id="@*com.android.systemui:id/keyguard_carrier_text" android:layout_width="fill_parent" android:layout_height="fill_parent" android:singleLine="true" android:layout_marginStart="@*com.android.systemui:dimen/keyguard_carrier_text_margin" android:layout_toStartOf="@*com.android.systemui:id/system_icons_super_container" />
 </com.android.systemui.statusbar.phone.KeyguardStatusBarView>
